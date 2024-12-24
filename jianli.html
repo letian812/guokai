@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="./jianli.css" />
+</head>
+<body>
+<div id="container">
+	<h1>个人简历</h1>
+	<h2>基本信息</h2>
+	<ul>
+		<li>姓名：贾飞宇</li>
+		<li>性别：男</li>
+		<li>出生日期：1987年1月1日</li>
+		<li>籍贯：河北省沧州市</li>
+	</ul>
+	<h2>教育经历</h2>
+	<table>
+		<tr>
+			<th>时间</th>
+			<th>学历/学位</th>
+			<th>学校/专业</th>
+		</tr>
+		<tr>
+			<th>2008年-2012年</th>
+			<th>本科</th>
+			<th>北京人文大学/计算机技术与应用</th>
+		</tr>
+		<tr>
+			<th>2013年-2025年</th>
+			<th>专科</th>
+			<th>国开大学/计算机网络技术</th>
+		</tr>	
+	</table>
+	<h2>工作经历</h2>
+	<ul>
+		<li>2012年-2014年，手心时空，java开发工程师</li>
+		<li>2014年-2024年，捷科，项目经理</li>
+	</ul>
+	<!--插入播放器-->
+	<div>
+    <h1>视频播放器</h1>
+
+    <!-- 创建视频播放器区域 -->
+    <div id="videoContainer"></div>
+
+    <div class="controls">
+        <button onclick="playPause()">播放/暂停</button>
+        <button onclick="stopVideo()">停止</button>
+        <button onclick="increaseVolume()">音量 +</button>
+        <button onclick="decreaseVolume()">音量 -</button>
+        <button onclick="muteUnmute()">静音/取消静音</button>
+        <button onclick="resizePlayer()">调整播放器大小</button>
+        <button onclick="changeBackgroundColor()">更改背景颜色</button>
+    </div>
+    </div>
+	<h2>技能</h2>
+	<ul>
+		<li>熟悉掌握java编程语言，熟悉spring、mybatis等框架</li>
+		<li>熟悉掌握Linux操作系统</li>
+		<li>了解前端技术HTML、css、javaScript等</li>
+	</ul>
+</div>
+<script>
+// 创建视频元素
+const videoContainer = document.getElementById("videoContainer");
+const video = document.createElement("video");
+
+// 设置视频属性
+video.setAttribute("controls", "true");
+video.setAttribute("width", "500");
+video.setAttribute("height", "250");
+
+// 添加视频源（请替换成你的视频文件路径）
+const source = document.createElement("source");
+source.setAttribute("src", "./6video.mp4");
+source.setAttribute("type", "video/mp4");
+video.appendChild(source);
+
+// 将视频元素添加到页面
+videoContainer.appendChild(video);
+
+// 播放/暂停功能
+function playPause() {
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
+
+// 停止视频
+function stopVideo() {
+    video.pause();
+    video.currentTime = 0;
+}
+
+// 增加音量
+function increaseVolume() {
+    if (video.volume < 1) {
+        video.volume += 0.1;
+    }
+}
+
+// 降低音量
+function decreaseVolume() {
+    if (video.volume > 0) {
+        video.volume -= 0.1;
+    }
+}
+
+// 静音/取消静音
+function muteUnmute() {
+    video.muted = !video.muted;
+}
+ // 调整视频播放器容器的大小
+        function resizePlayer() {
+            const videoContainer = document.getElementById('videoContainer');
+            
+            // 使用 JavaScript 动态设置容器的宽度和高度
+            videoContainer.style.width = '90%';  // 设置容器的宽度为页面宽度的90%
+            videoContainer.style.height = '500px'; // 设置容器的高度为500px
+        }
+
+        // 动态改变视频播放器容器的背景颜色
+        function changeBackgroundColor() {
+            const videoContainer = document.getElementById('videoContainer');
+            
+            // 生成一个随机的背景颜色
+            const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+            
+            // 设置容器的背景颜色
+            videoContainer.style.backgroundColor = randomColor;
+        }
+     
+</script>
+</body>
+</html>
