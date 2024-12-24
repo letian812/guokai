@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人介绍页</title>
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+        .profile-card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .profile-card {
+            margin-top: 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .social-icons a {
+            font-size: 20px;
+            margin: 0 10px;
+            color: #333;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">我的个人介绍</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">关于我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">技能</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">联系方式</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="ind_1.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1200x500?text=照片2" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1200x500?text=照片3" class="d-block w-100" alt="..." />
+            </div>
+        </div>
+    </div>
+
+    <!-- 关于我 -->
+    <div id="about" class="container profile-card">
+        <h2 class="section-title">关于我</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="./jiafy.png" alt="头像" class="img-fluid rounded-circle">
+            </div>
+            <div class="col-md-8">
+                <h4>贾飞宇</h4>
+                <p>我是一个热爱技术的开发者，擅长 Java 编程和前端开发，喜欢探索新技术和解决问题。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 技能展示 -->
+    <div id="skills" class="container">
+        <h2 class="section-title">技能</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">前端开发</h5>
+                        <p class="card-text">掌握 HTML, CSS, JavaScript 和框架如 React 和 Vue.js。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">后端开发</h5>
+                        <p class="card-text">熟悉 Java, Spring Boot, MyBatis 等开发框架，能够进行全栈开发。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">数据库管理</h5>
+                        <p class="card-text">精通 MySQL 和 MongoDB 数据库，能够进行高效的数据存储与查询优化。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 联系方式 -->
+    <div id="contact" class="container">
+        <h2 class="section-title">联系方式</h2>
+        <p>你可以通过以下方式联系我：</p>
+        <div class="text-center social-icons">
+            <a href="https://github.com" target="_blank" class="btn btn-outline-dark me-3">
+                <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="mailto:example@example.com" class="btn btn-outline-dark">
+                <i class="bi bi-envelope"></i> Email
+            </a>
+        </div>
+    </div>
+
+    <!-- 引入 Bootstrap 5 JS 和 Bootstrap 图标 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+
+</body>
+</html>
